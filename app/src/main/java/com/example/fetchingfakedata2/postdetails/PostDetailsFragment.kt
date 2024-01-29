@@ -10,8 +10,9 @@ import com.example.fetchingfakedata2.R
 import com.example.fetchingfakedata2.base.BaseFragment
 import com.example.fetchingfakedata2.databinding.FragmentPostDetailsBinding
 import com.example.fetchingfakedata2.databinding.FragmentPostsBinding
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class PostDetailsFragment : BaseFragment<FragmentPostDetailsBinding,PostDetailsViewModel>() {
     override val layout: Int
         get() = R.layout.fragment_post_details

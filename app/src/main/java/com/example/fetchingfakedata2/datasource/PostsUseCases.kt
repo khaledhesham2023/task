@@ -1,8 +1,11 @@
 package com.example.fetchingfakedata2.datasource
 
-class PostsUseCases {
+import javax.inject.Inject
+import javax.inject.Singleton
 
-    val repo = PostsRepo()
+@Singleton
+class PostsUseCases @Inject constructor(private val repo: PostsRepo) {
+
     suspend fun getPosts() = repo.getPosts()
     suspend fun getPostDetails(id:Long) = repo.getPostDetails(id)
 }

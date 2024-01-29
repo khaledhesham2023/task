@@ -6,11 +6,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.fetchingfakedata2.datasource.PostsUseCases
 import com.example.fetchingfakedata2.model.Post
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
-class PostsViewModel: ViewModel() {
-
-    private val postsUseCases = PostsUseCases()
+@HiltViewModel
+class PostsViewModel @Inject constructor(private val postsUseCases: PostsUseCases): ViewModel() {
 
     private var _getPostsLiveData = MutableLiveData<List<Post>>()
     val getPostsLiveData:LiveData<List<Post>>

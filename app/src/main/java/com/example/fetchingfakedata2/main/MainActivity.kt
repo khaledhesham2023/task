@@ -10,7 +10,9 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.example.fetchingfakedata2.R
 import com.example.fetchingfakedata2.base.BaseActivity
 import com.example.fetchingfakedata2.databinding.ActivityMainBinding
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : BaseActivity<ActivityMainBinding>() {
     override val layout: Int
         get() = R.layout.activity_main
